@@ -30,7 +30,7 @@ public class FetchRequest <T: NSManagedObject>: NSFetchRequest {
     }
 }
 
-public func fetchRequest <T: NSManagedObject>(request request: FetchRequest<T>, inContext context: NSManagedObjectContext) throws -> [T] {
+public func fetch <T: NSManagedObject>(request request: FetchRequest<T>, inContext context: NSManagedObjectContext) throws -> [T] {
     var results = [AnyObject]()
     var caughtError: NSError?
     
